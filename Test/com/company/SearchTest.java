@@ -1,5 +1,6 @@
 package com.company;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,11 +14,11 @@ public class SearchTest {
         String firstName1 = "Mia";
         String lastName1 = "Svensson";
         String idNumber1 = "1111111111";
-        assertNull(search.isMemberInTheSystem(firstName1, lastName1, idNumber1));
+        TestCase.assertNull(search.isMemberInTheSystem(firstName1, lastName1, idNumber1));
 
         String firstName2 = "Luna";
         String lastName2 = "Nilsson";
         String idNumber2 = "22222222222";
-        assertNull(search.isMemberInTheSystem(firstName2, lastName2, idNumber2));
+        TestCase.assertNull(search.isMemberInTheSystem(firstName2, lastName2, idNumber2));
     }
 }
