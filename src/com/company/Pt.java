@@ -11,16 +11,22 @@ import java.time.LocalDate;
 
 public class Pt {
 
-    public boolean writeTrainingActivity(Member member) throws IOException {
+    public boolean writeTrainingActivity(Member member) {
 
-        LocalDate now = LocalDate.now();
+        LocalDate.now();
 
         Path path = Paths.get("/Users/gabi/IdeaProjects/BestGymEver/Resources/pt.txt");
 
-        BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-        writer.write(member.getFirstName() + " " + member.getLastName() + ", " + member.getIdNumber() + ": " + LocalDate.now() + "\n");
-        writer.close();
-        System.exit(0);
+        BufferedWriter writer;
+        try {
+            writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+            writer.write(member.getFirstName() + " " + member.getLastName() + ", " + member.getIdNumber() + ": " + LocalDate.now() + "\n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+
+        }
         return true;
     }
 }

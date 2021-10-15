@@ -15,10 +15,10 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        //userInput = JOptionPane.showInputDialog("Please write personnummer (only digits) or name");
+        //userInput = JOptionPane.showInputDialog("Please write personnummer (only digits) or full name");
         //userInput = "8512021234"; // inaktiv
         //userInput = "Diamanda Djedi"; // aktiv
-        userInput = "7805211234"; // aktiv
+        //userInput = "7805211234"; // aktiv
         //userInput = "foobar";
         //userInput = "";
 

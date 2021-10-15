@@ -16,8 +16,7 @@ public class Member {
         this.lastName = lastName;
         this.idNumber = idNumber;
         if (membershipPaymentDate != null) {
-            LocalDate m = LocalDate.parse(membershipPaymentDate);
-            this.membershipPaymentDate = m;
+            this.membershipPaymentDate = LocalDate.parse(membershipPaymentDate);
         }
     }
 

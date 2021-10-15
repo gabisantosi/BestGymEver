@@ -8,8 +8,6 @@ import java.time.LocalDate;
 
 public class Search {
 
-    private String[] idAndName;
-
     public Member isMemberInTheSystem(String firstName, String lastName, String idNumber) {
 
         int i = 0;
@@ -25,7 +23,7 @@ public class Search {
                 }
 
                 if (i == 0) {
-                    idAndName = line.trim().split(", ");
+                    String[] idAndName = line.trim().split(", ");
                     String id = idAndName[0];
                     String[] fullName = idAndName[1].split(" ");
                     String fn = fullName[0].substring(0, 1).toUpperCase() + fullName[0].substring(1).toLowerCase();
